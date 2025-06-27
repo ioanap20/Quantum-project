@@ -1,2 +1,4 @@
 def translation():
-    pass
+    print("Test only one branch")
+    
+
