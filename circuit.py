@@ -2,7 +2,7 @@ from gates import Gate
 
 class QuantumCircuit:
     def __init__(self, gate_string: str):
-        self.gates = [Gate(name) for name in gate_string.split()]
+        self.gates = [Gate(name) for name in list(gate_string)]
     
     def translate(self) -> str:
         translated = []
