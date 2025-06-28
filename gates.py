@@ -9,7 +9,7 @@ class Gate:
         return '-iZ(0)X(pi)Z(0)'
 
     def Y_translation(self):
-        return '-iZ(pi)X(pi)'
+        return 'iZ(pi)X(pi)'
 
     def Z_translation(self):
         return '-iZ(pi/2)'
