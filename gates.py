@@ -6,7 +6,7 @@ class Gate:
         return 'Z(0)X(0)Z(0)'
 
     def X_translation(self):
-        return '-iX(pi)'
+        return '-iZ(0)X(pi)Z(0)'
 
     def Y_translation(self):
         return '-iZ(pi)X(pi)'
@@ -25,25 +25,6 @@ class Gate:
             'Z': self.Z_translation(),
             'H': self.H_translation()
         }
-
-        expr = lookup.get(self.name, '')
-        if expr.startswith(('i', '-i')):
-            expr = expr[2:]
-
-        # Split into ['Z(0)', 'X(0)', ...]
-        parts = []
-        i = 0
-        while i < len(expr):
-            if expr[i] in {'X', 'Y', 'Z'}:
-                j = expr.find(')', i)
-                parts.append(expr[i:j+1])
-                i = j + 1
-            else:
-                i += 1
-        return parts
-
-
-# ✅ Example usage
-for gate in ['I', 'X', 'Y', 'Z', 'H']:
-    g = Gate(gate)
-    print(f"{gate} → {g.translate()}")
+        expr = lookup.get(self.name)
+        print(expr)
+        return expr
