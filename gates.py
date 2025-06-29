@@ -16,6 +16,9 @@ class Gate:
 
     def H_translation(self):
         return 'iZ(3pi/2)X(3pi/2)Z(3pi/2)'
+    
+    def T_translation(self):
+        return 'exp(ipi/8)Z(pi/4)'
 
     def translate(self) -> list:
         lookup = {
@@ -23,7 +26,8 @@ class Gate:
             'X': self.X_translation(),
             'Y': self.Y_translation(),
             'Z': self.Z_translation(),
-            'H': self.H_translation()
+            'H': self.H_translation(),
+            'T': self.T_translation()
         }
         expr = lookup.get(self.name)
         print(expr)

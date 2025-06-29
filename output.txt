@@ -1,1 +1,1 @@
--iZ(0)X(pi)Z(0)-iZ(pi)X(pi)-iZ(pi/2)
+exp(ipi/8)Z(pi/4)-iZ(0)X(pi)Z(0)iZ(pi)X(pi)
