@@ -9,7 +9,7 @@ class Gate:
         return '-iZ(0)X(pi)Z(0)'
 
     def Y_translation(self):
-        return 'iZ(pi)X(pi)'
+        return 'iZ(pi)X(pi)Z(0)'
 
     def Z_translation(self):
         return 'iZ(pi)X(0)Z(0)'
@@ -18,7 +18,7 @@ class Gate:
         return 'iZ(3pi/2)X(3pi/2)Z(3pi/2)'
     
     def T_translation(self):
-        return 'exp(ipi/8)Z(pi/4)'
+        return 'exp(ipi/8)Z(pi/4)X(0)Z(0)'
 
     def translate(self) -> list:
         lookup = {
